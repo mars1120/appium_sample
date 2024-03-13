@@ -1,0 +1,32 @@
+Step 1: Ensure Prerequisites are Installed
+Install Node.js and Appium: Appium requires Node.js. After installing Node.js, install Appium using npm (Node Package Manager) by running npm install -g appium in your command line.
+--Install Java Development Kit (JDK): Appium relies on Java, so ensure you have JDK installed and configured correctly.--
+Install Android SDK: Although you're using BlueStacks, having Android SDK installed helps, especially for using ADB (Android Debug Bridge).
+Install Appium Python Client: Use pip to install the Appium Python Client in your environment with pip install Appium-Python-Client.
+
+adb 加環境變數
+https://developer.android.com/tools/releases/platform-tools?hl=zh-tw
+
+adb connect 127.0.0.1:5555
+
+or
+
+adb connect localhost:5555
+
+
+adb devices
+
+adb -s localhost:5555 shell pm list packages
+
+
+adb -s localhost:5555 shell "dumpsys activity activities | grep mResumedActivity"
+
+adb -s localhost:5555 shell am start -W com.google.android.calculator/com.android.calculator2.Calculator
+
+adb -s localhost:5555 shell getprop ro.build.version.release
+
+
+設定全域變數  sdk路徑
+
+ANDROID_HOME=C:\Users\User\AppData\Local\Android\Sdk
+
