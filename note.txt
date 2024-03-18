@@ -25,8 +25,32 @@ adb -s localhost:5555 shell am start -W com.google.android.calculator/com.androi
 
 adb -s localhost:5555 shell getprop ro.build.version.release
 
+appium driver list
+
+appium driver install uiautomator2
+
 
 設定全域變數  sdk路徑
 
 ANDROID_HOME=C:\Users\User\AppData\Local\Android\Sdk
 
+
+pip3 install -U uiautomator2  
+
+uiautomator2 --help
+
+python -m pip install --upgrade pip setuptools wheel
+
+先連才會出現
+adb connect 127.0.0.1:5555
+
+adb devices
+
+#砍掉emulator-5554
+
+netstat -ano |sls 5555 
+
+kill $pid 
+
+#Invalid version
+pip install packaging==21.3
